@@ -14,7 +14,7 @@ st.sidebar.write('**당신의 선택** : ', your_option)
 
 
 # ---------- 메인(Main) 바 화면 구성 ----------
-folder = './data/'
+
 image_files = ['https://github.com/hijyunk/streamlit/blob/main/sidebar/data/Vermeer.png?raw=true', 
                'https://github.com/hijyunk/streamlit/blob/main/sidebar/data/Gogh.png?raw=true', 
                'https://github.com/hijyunk/streamlit/blob/main/sidebar/data/Munch.png?raw=true', 
@@ -22,5 +22,5 @@ image_files = ['https://github.com/hijyunk/streamlit/blob/main/sidebar/data/Verm
 
 selectbox_options_index = selectbox_options.index(your_option)
 image_file = image_files[selectbox_options_index]
-image_local = Image.open(folder + image_file)
+image_local = Image.open(image_file)
 st.image(image_local, caption=your_option)
